@@ -20,7 +20,7 @@ export class HorizontalMenuComponent implements OnInit {
             {
               label: 'Prvi labos', 
               icon: 'pi pi-fw pi-desktop',
-              routerLink: ['prvi']
+              routerLink: ['prvi-labos']
             },
           ]
       },

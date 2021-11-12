@@ -8,16 +8,13 @@ const routes: Routes = [
     path: '',
     component: FullComponent,
     children: [
-      
+      {
+        path: 'prvi-labos',
+        component: PrviLabosDashboardComponent,
+        loadChildren: () => import('./features/prvi-labos/prvi-labos.module').then(p => p.PrviLabosModule)
+      }
     ]
   },
-  {
-    path: 'prvi',
-    component: PrviLabosDashboardComponent,
-    children: [
-      
-    ]
-  }
 ];
 
 @NgModule({

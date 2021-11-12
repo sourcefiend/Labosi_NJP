@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrviLabosTableToolbarComponent implements OnInit {
 
-  constructor() { }
+  value: boolean = false;
+  years: Number[] = [];
+
+  constructor() {
+    for (let i = 0; i <= (new Date().getFullYear()) - 1888; i++) {
+      this.years.push(i + 1888);
+    }
+
+
+  }
 
   ngOnInit(): void {
+    console.log(this.years);
   }
 
 }

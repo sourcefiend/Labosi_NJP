@@ -7,8 +7,9 @@ import { FullComponent } from './features/layout/full/full.component';
 import { HorizontalMenuComponent } from './features/layout/horizontal-menu/horizontal-menu.component';
 import { LayoutModule } from './features/layout/layout.module';
 import { PrviLabosModule } from './features/prvi-labos/prvi-labos.module';
-import {ButtonModule} from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PrviLabosModule,
     ButtonModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

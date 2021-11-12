@@ -1,1 +1,16 @@
-<p>prvi-labos-table-toolbar works!</p>
+<div class="card">
+    <div class="formgroup-inline">
+        <div class="field">
+            <span class="p-float-label">
+                <p-inputNumber [min]="0" [max]="250" inputId="movieLimit"></p-inputNumber>
+                <label for="movieLimit">Limit</label>
+            </span>
+        </div>
+        <div class="field-checkbox">
+            <p-checkbox [(ngModel)]="value" [binary]="true" label="Reverse: "></p-checkbox>
+        </div>
+        <div class="field">
+            <p-dropdown [options]="years" [virtualScroll]="true" [itemSize]="30"></p-dropdown>
+        </div>
+    </div>
+</div>
