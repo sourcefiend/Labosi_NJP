@@ -10,6 +10,8 @@ import { PrviLabosModule } from './features/prvi-labos/prvi-labos.module';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -19,13 +21,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HorizontalMenuComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
     PrviLabosModule,
     ButtonModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

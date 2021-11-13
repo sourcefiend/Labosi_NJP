@@ -10,6 +10,11 @@ export class PrviLabosDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+
+  public addMovie() {
+
   }
 
 }

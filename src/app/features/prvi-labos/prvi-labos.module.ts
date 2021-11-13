@@ -8,7 +8,9 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CheckboxModule } from 'primeng/checkbox';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { AppModule } from 'src/app/app.module';
+import { TableModule } from 'primeng/table';
+import { CommonModule } from '@angular/common';
+import { ImageModule } from 'primeng/image';
 
 
 @NgModule({
@@ -23,7 +25,10 @@ import { AppModule } from 'src/app/app.module';
     InputNumberModule,
     CheckboxModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    TableModule,
+    CommonModule,
+    ImageModule
   ],
 })
 export class PrviLabosModule { }

@@ -7,10 +7,12 @@
             </span>
         </div>
         <div class="field-checkbox">
-            <p-checkbox [(ngModel)]="value" [binary]="true" label="Reverse: "></p-checkbox>
+            <p-checkbox [(ngModel)]="value" [binary]="true" label="Reverse"></p-checkbox>
         </div>
         <div class="field">
             <p-dropdown [options]="years" [virtualScroll]="true" [itemSize]="30"></p-dropdown>
         </div>
+        <p-button label="Učitaj filmove"></p-button>
+        <p-button label="Osvježi" icon="pi pi-refresh" iconPos="left"></p-button>
     </div>
 </div>
