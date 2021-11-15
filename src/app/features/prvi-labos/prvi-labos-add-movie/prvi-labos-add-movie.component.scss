@@ -1,0 +1,17 @@
+.card {
+    margin-top: 1.5em;
+}
+
+:host ::ng-deep {
+    p-inputNumber {
+        width: 100% !important;
+    }
+    .p-inputnumber {
+        width: 100% !important;
+    }
+
+    .p-float-label {
+        margin-bottom: 0.5em
+    }
+}
+

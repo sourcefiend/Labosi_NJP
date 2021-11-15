@@ -11,6 +11,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { ImageModule } from 'primeng/image';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { ImageModule } from 'primeng/image';
     DropdownModule,
     TableModule,
     CommonModule,
-    ImageModule
+    ImageModule,
+    DynamicDialogModule,
+    InputTextModule
   ],
 })
 export class PrviLabosModule { }

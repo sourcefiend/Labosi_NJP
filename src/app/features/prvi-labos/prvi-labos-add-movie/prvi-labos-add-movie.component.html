@@ -1,1 +1,31 @@
-<p>prvi-labos-add-movie works!</p>
+<div class="card">
+    <div class="formgrid grid">
+        <div class="field col-6">
+            <div class="p-float-label">
+                <input type="text" id="movieName" pInputText style="width: 100%;">
+                <label for="movieName">Naslov</label>
+            </div>
+        </div>
+        <div class="field col-6">
+            <div class="p-float-label">
+                <p-inputNumber mode="decimal" [minFractionDigits]="1" [maxFractionDigits]="1"></p-inputNumber>
+                <label for="movieRating">Rating</label>
+            </div>
+        </div>
+        <div class="field col-6">
+            <div class="p-float-label">
+                <p-inputNumber id="movieYear"></p-inputNumber >
+                <label for="movieYear">Godina</label>
+            </div>
+        </div>
+        <div class="field col-6">
+            <div class="p-float-label">
+                <input type="text" id="movieUrl" pInputText style="width: 100%;">
+                <label for="movieUrl">URL</label>
+            </div>
+        </div>
+        <div>
+            <button pButton type="button" label="Spremi" icon="pi pi-save" iconPos="left" class="p-button-success"></button>
+        </div>
+    </div>
+</div>
