@@ -12,6 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { CommonModule } from '@angular/common';
     ButtonModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormlyModule.forRoot({ extras: { lazyRender: true } }),
+    FormlyPrimeNGModule
   ],
   providers: [],
   bootstrap: [AppComponent]

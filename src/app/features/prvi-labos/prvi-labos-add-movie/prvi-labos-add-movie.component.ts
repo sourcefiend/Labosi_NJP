@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { FormlyFieldConfig } from '@ngx-formly/core';
+import { Movie } from 'src/app/shared/models/movie';
 
 @Component({
   selector: 'app-prvi-labos-add-movie',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrviLabosAddMovieComponent implements OnInit {
 
+  form = new FormGroup({});
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(model: Movie) {
+
   }
 
 }
