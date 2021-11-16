@@ -4,7 +4,7 @@ import { PrviLabosAddMovieComponent } from './prvi-labos-add-movie/prvi-labos-ad
 import { ButtonModule } from 'primeng/button';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CheckboxModule } from 'primeng/checkbox';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
@@ -13,6 +13,8 @@ import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
+import { ToastModule } from 'primeng/toast';
+import { MessageModule } from 'primeng/message';
 
 
 @NgModule({
@@ -32,7 +34,10 @@ import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
     DynamicDialogModule,
     InputTextModule,
     FormlyModule.forRoot({ extras: { lazyRender: true } }),
-    FormlyPrimeNGModule
+    FormlyPrimeNGModule,
+    ToastModule,
+    ReactiveFormsModule,
+    MessageModule
   ],
 })
 export class PrviLabosModule { }

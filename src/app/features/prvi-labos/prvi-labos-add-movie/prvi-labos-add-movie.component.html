@@ -1,31 +1,33 @@
 <div class="card">
-    <div class="formgrid grid">
-        <div class="field col-6">
-            <div class="p-float-label">
-                <input type="text" id="movieName" pInputText style="width: 100%;">
-                <label for="movieName">Naslov</label>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <div class="formgrid grid">
+            <div class="field col-6">
+                <div class="p-float-label">
+                    <input type="text" formControlName="name" pInputText style="width: 100%;">
+                    <label for="movieName">Naslov</label>
+                </div>
             </div>
-        </div>
-        <div class="field col-6">
-            <div class="p-float-label">
-                <p-inputNumber mode="decimal" [minFractionDigits]="1" [maxFractionDigits]="1"></p-inputNumber>
-                <label for="movieRating">Rating</label>
+            <div class="field col-6">
+                <div class="p-float-label">
+                    <p-inputNumber mode="decimal" [minFractionDigits]="1" [maxFractionDigits]="1" formControlName="rating"></p-inputNumber>
+                    <label for="movieRating">Rating</label>
+                </div>
             </div>
-        </div>
-        <div class="field col-6">
-            <div class="p-float-label">
-                <p-inputNumber id="movieYear"></p-inputNumber >
-                <label for="movieYear">Godina</label>
-        </div>
-        </div>
-        <div class="field col-6">
-            <div class="p-float-label">
-                <input type="text" id="movieUrl" pInputText style="width: 100%;">
-                <label for="movieUrl">URL</label>
+            <div class="field col-6">
+                <div class="p-float-label">
+                    <p-inputNumber formControlName="year" [useGrouping]="false"></p-inputNumber >
+                    <label for="movieYear">Godina</label>
+            </div>
+            </div>
+            <div class="field col-6">
+                <div class="p-float-label">
+                    <input type="text" formControlName="poster" pInputText style="width: 100%;">
+                    <label for="movieUrl">URL</label>
+                </div>
             </div>
         </div>
         <div>
-            <button pButton type="button" label="Spremi" icon="pi pi-save" iconPos="left" class="p-button-success"></button>
+            <button pButton type="submit" label="Spremi" icon="pi pi-save" iconPos="left" class="p-button-success" style="float: right;" [disabled]="form.invalid"></button>
         </div>
-    </div>
+    </form>
 </div>

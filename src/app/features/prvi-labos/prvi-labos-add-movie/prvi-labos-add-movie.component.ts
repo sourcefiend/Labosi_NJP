@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Movie } from 'src/app/shared/models/movie';
+import { MovieService } from 'src/app/shared/services/movies.service';
 
 @Component({
   selector: 'app-prvi-labos-add-movie',
@@ -10,15 +11,31 @@ import { Movie } from 'src/app/shared/models/movie';
 })
 export class PrviLabosAddMovieComponent implements OnInit {
 
-  form = new FormGroup({});
+  model!: Movie;
+
+  form = new FormGroup({
+    name: new FormControl('', Validators.required),
+    year: new FormControl(null, Validators.required),
+    rating: new FormControl(null, Validators.required),
+    poster: new FormControl('', Validators.required)
+  });
   
-  constructor() { }
+  constructor(
+    private movieService: MovieService,
+    private dialogRef: DynamicDialogRef
+  ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(model: Movie) {
-
+    try {
+      this.movieService.addMovie(model);
+      this.dialogRef.close('success');
+    } catch (error) {
+      console.log(error);
+      this.dialogRef.close('error');
+    }
   }
 
 }
