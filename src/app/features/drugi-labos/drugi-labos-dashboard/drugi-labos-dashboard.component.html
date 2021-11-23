@@ -1,0 +1,42 @@
+<h1 style="text-align: center;">Postovi ({{posts.length}})</h1>
+<div class="grid mb-5">
+  <div class="col-12" *ngFor="let post of posts; let i = index">
+    <p-card>
+      <ng-template pTemplate="header">
+        By <strong>{{ post.user }}</strong> on {{ post.timestamp | date: "medium" }}
+      </ng-template>
+      <ng-template #commentArea [ngIf]="!this.isEdit">
+        {{ post.comment }}
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <button pButton type="button" label="Delete" icon="pi pi-trash" iconPos="left" class="p-button-danger" (click)="deletePost(post)"></button>
+        <button pButton type="button" label="Edit" icon="pi pi-user-edit" iconPos="left" class="p-button-warning"></button>
+      </ng-template>
+    </p-card>
+  </div>
+</div>
+<button pButton type="button" label="Add post" icon="pi pi-plus" iconPos="left" class="p-button-success" (click)="addPost()"></button>
+
+<div class="card mt-5" [hidden]="this.showAddPost">
+      <div class="formgrid grid">
+          <div class="field col-12">
+              <div class="p-float-label">
+                  <input type="text" [(ngModel)]="model.user" pInputText style="width: 100%;">
+                  <label for="movieName">User</label>
+              </div>
+          </div>
+          <div class="field col-12">
+              <div class="p-float-label">
+                  <textarea id="float-comment" [(ngModel)]="model.comment" rows="5" pInputTextarea style="width: 100%; max-width: 100%;"></textarea>
+                  <label for="float-comment">Comment</label>
+              </div>
+          </div>
+      </div>
+      <div>
+          <button pButton type="button" label="Spremi" icon="pi pi-save" iconPos="left" style="float: right;" (click)="savePost()" 
+          [disabled]="!model.comment.length" [ngClass]="{
+            'p-button-success' : model.comment.length,
+            'p-button-danger' : !model.comment.length
+          }"></button>
+      </div>
+</div>

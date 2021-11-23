@@ -10,11 +10,21 @@ p-checkbox {
     margin-top: 0.5em;
 }
 
-p-button {
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
+p-button, button {
+    margin-right: 0.5em!important;
 }
+
 
 hr {
     border: 1px solid rgb(48, 69, 98);
+}
+
+// Card styles
+
+.p-card {
+    background-color: #30435ea9!important;
+}
+
+.p-card-header {
+    padding: 0.5em;
 }

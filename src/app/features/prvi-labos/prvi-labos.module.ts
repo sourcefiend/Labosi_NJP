@@ -9,12 +9,13 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { ImageModule } from 'primeng/image';
-import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
 import { ToastModule } from 'primeng/toast';
 import { MessageModule } from 'primeng/message';
+import { MessageService } from 'primeng/api';
 
 
 @NgModule({
@@ -39,5 +40,9 @@ import { MessageModule } from 'primeng/message';
     ReactiveFormsModule,
     MessageModule
   ],
+  providers: [
+    DialogService,
+    MessageService
+  ]
 })
 export class PrviLabosModule { }
