@@ -27,6 +27,11 @@ export class HorizontalMenuComponent implements OnInit {
               icon: 'pi pi-fw pi-desktop',
               routerLink: ['drugi-labos']
             },
+            {
+              label: 'Četvrti labos', 
+              icon: 'pi pi-fw pi-desktop',
+              routerLink: ['cetvrti-labos']
+            },
           ]
       },
   ];

@@ -1,0 +1,33 @@
+<div class="card">
+    <span class="p-float-label">
+      <p-inputNumber
+        [(ngModel)]="semestarFilter"
+        inputId="semestarFilter"
+        [inputStyle]="{'width': '300px'}"
+      ></p-inputNumber>
+      <label for="semestarFilter">Filtriraj studente prema semestru...</label>
+    </span>
+
+  <p-table [value]="students | semestar : semestarFilter">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="ime">
+          Name <p-sortIcon field="ime"></p-sortIcon>
+        </th>
+        <th pSortableColumn="prosjek">
+          Prosjek <p-sortIcon field="prosjek"></p-sortIcon>
+        </th>
+        <th pSortableColumn="semestar">
+          Semestar <p-sortIcon field="semestar"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-student>
+      <tr>
+        <td><a [routerLink]="['/cetvrti-labos/' + student.jmbag]">{{ student.ime }}</a></td>
+        <td>{{ student.prosjek }}</td>
+        <td>{{ student.semestar }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

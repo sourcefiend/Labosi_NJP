@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
     BrowserAnimationsModule,
     HttpClientModule,
     FormlyModule.forRoot({ extras: { lazyRender: true } }),
-    FormlyPrimeNGModule
+    FormlyPrimeNGModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
